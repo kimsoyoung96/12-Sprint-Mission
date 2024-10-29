@@ -11,12 +11,18 @@ body {
   color: #374151;
   margin: 0;
   max-width: 1920px;
+  word-break: keep-all;
 }
 
 h1, h2, h3 {
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
+}
+
+.header-title {
+  padding-right: 62px;
+  padding-bottom: 32px;
 }
 
 .homepage-logo {
@@ -42,37 +48,59 @@ a:link {
   cursor: pointer;
 }
 
-.home-tf-back {
+.header-container-back {
   display: block;
   background-color: #cfe5ff;
-  padding-top: 100px;
+  height: 540px;
 }
 
-.home-tf {
+/* .header-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+} */
 
+.header-container {
+position: relative;
+padding-top: 200px;
+max-width: 1110px;
+margin: 0 auto;
 }
 
-.home-tf-text {
+.main-photo {
+  position: absolute;
+  bottom: -40px;
+  right: 0px;
+}
+
+.header-container-text {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 357px;
+  height: 260px;
+  margin: 40px 7px 40px 0;
 }
 
-#button {
+.button {
   background-color: #3692ff;
   border-radius: 40px;
   padding: 16px 0;
+  margin-bottom: 60px;
   text-align: center;
 }
 
-.photo {
+/* .photo {
   width: 100%;
   height: auto;
-  max-width: 50%; /* 이미지 최대 너비 지정 */
-}
+  max-width: 50%;
+} */
 
 .main-size {
   margin: 138px auto;
