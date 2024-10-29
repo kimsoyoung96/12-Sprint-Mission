@@ -163,6 +163,22 @@ margin: 0 auto;
   height: 238px;
 }
 
+.bottom-container-back {
+  display: block;
+  background-color: #cfe5ff;
+  padding-top: 143px;
+  margin-top: 138px;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  width: 1110px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer-back {
   background-color: #111827;
   height: 160px;
