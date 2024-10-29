@@ -39,6 +39,7 @@ h1 {
 a:link {
   color: #ffffff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .home-tf-back {
