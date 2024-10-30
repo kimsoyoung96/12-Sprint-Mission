@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: Pretendard, sans-serif;
+}
+
+body {
+  color: #1f2937;
+  margin: 0;
+  max-width: 1920px;
+  word-break: keep-all;
+}
+
+.form-container {
+  max-width: 640px;
+  height: 618px;
+  margin: 231px auto;
+  /* text-align: center; */
+}

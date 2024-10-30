@@ -25,12 +25,17 @@ h1, h2, h3 {
   padding-bottom: 32px;
 }
 
+.homepage-logo-container {
+  max-width: 1110px;
+  margin: 0 200px;
+}
+
 .homepage-logo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 9px 200px;
+  padding: 9px 0;
 }
 
 .homepage-logo-right {
