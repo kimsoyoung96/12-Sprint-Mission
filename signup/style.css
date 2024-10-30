@@ -66,3 +66,26 @@ a:link {
   text-decoration: none;
   color: #ffffff;
 }
+
+.easy-login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #e6f2ff;
+  width: 100%;
+  padding: 16px 23px;
+  border-radius: 8px;
+  margin: 24px 0;
+}
+
+.easy-login-text {
+  flex-grow: 1;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.easy-login-sns {
+  display: flex;
+  gap: 16px;
+}
