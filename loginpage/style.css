@@ -74,3 +74,15 @@ a:link {
 .east-login-text {
   flex-grow: 1;
 }
+
+.join {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.join-page:link {
+  text-decoration: underline;
+  color: #3692ff;
+}
