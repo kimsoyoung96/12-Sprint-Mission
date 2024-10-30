@@ -89,3 +89,15 @@ a:link {
   display: flex;
   gap: 16px;
 }
+
+.login-check {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.login-page:link {
+  text-decoration: underline;
+  color: #3182f6;
+}
