@@ -24,12 +24,19 @@ label {
 
 input {
   display: block;
+  background-color: #f3f4f6;
+  border: 0;
+  border-radius: 12px;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   width: 100%;
   padding: 15px 24px;
   margin-bottom: 24px;
+}
+
+input:focus {
+  outline:1px solid #3692ff;
 }
 
 .form-container {
