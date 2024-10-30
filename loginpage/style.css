@@ -59,3 +59,18 @@ a:link {
   text-decoration: none;
   color: #f3f4f6;
 }
+
+.easy-login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #e6f2ff;
+  width: 100%;
+  padding: 16px 23px;
+  border-radius: 8px;
+  margin: 24px 0;
+}
+
+.east-login-text {
+  flex-grow: 1;
+}
