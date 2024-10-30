@@ -16,10 +16,24 @@ body {
 
 label {
   display: block;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.48px;
+  margin-bottom: 16px;
 }
 
 input {
   display: block;
+  background-color: #f3f4f6;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  padding: 16px 24px;
+  border: 0;
+  border-radius: 12px;
+  margin-bottom: 24px;
 }
 
 input:focus {
@@ -35,4 +49,20 @@ input:focus {
 .logo {
   text-align: center;
   margin-bottom: 40px;
+}
+
+.join {
+  width: 100%;
+  background-color: #9ca3af;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 16px 124px;
+  text-align: center;
+}
+
+a:link {
+  text-decoration: none;
+  color: #ffffff;
 }
