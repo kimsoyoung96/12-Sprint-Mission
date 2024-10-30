@@ -78,8 +78,13 @@ a:link {
   margin: 24px 0;
 }
 
-.east-login-text {
+.easy-login-text {
   flex-grow: 1;
+}
+
+.easy-login-sns {
+  display: flex;
+  gap: 16px;
 }
 
 .join {
