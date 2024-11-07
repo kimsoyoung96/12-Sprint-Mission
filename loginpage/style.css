@@ -33,6 +33,10 @@ input {
   width: 100%;
   padding: 15px 24px;
   margin-bottom: 24px;
+
+  @media (max-width: 767px) {
+    width: 400px;
+  }
 }
 
 input:focus {
@@ -45,7 +49,10 @@ input:focus {
     margin: 190px 52px 325px;
   }
   @media (max-width: 767px) {
-    margin: 80px 16px 231px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
   }
 }
 
