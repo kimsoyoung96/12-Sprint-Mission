@@ -141,6 +141,7 @@ margin: 0 auto;
     margin-left: 24px;
     margin-right: 24px; 
     height: 708px;
+    gap: 0;
    }
    @media (max-width: 767px) {
     flex-direction: column; 
@@ -185,6 +186,13 @@ margin: 0 auto;
   padding-left: 24px;
   width: 359px;
   height: 238px;
+
+  @media (max-width: 1199px) {
+    margin: 24px 0 0 0 ;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+   }
 }
 
 .left-text1 {
