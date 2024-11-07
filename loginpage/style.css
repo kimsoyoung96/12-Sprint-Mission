@@ -39,11 +39,29 @@ input:focus {
   outline:1px solid #3692ff;
 }
 
+.box {
+
+  @media (max-width: 1199px) {
+    margin: 190px 52px 325px;
+  }
+  @media (max-width: 767px) {
+    margin: 80px 16px 231px;
+  }
+}
+
 .form-container {
   max-width: 640px;
   height: 618px;
   margin: 231px auto;
-  /* text-align: center; */
+  
+  @media (max-width: 1199px) {
+    display: inline;
+    margin: 0;
+  }
+  @media (max-width: 767px) {
+    display: inline;
+    margin: 0;
+  }
 }
 
 .logo {
