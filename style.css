@@ -26,8 +26,7 @@ h1, h2, h3 {
 }
 
 .homepage-logo-container {
-  max-width: 1110px;
-  margin: 0 200px;
+
 }
 
 .homepage-logo {
@@ -36,6 +35,19 @@ h1, h2, h3 {
   justify-content: space-between;
   align-items: center;
   padding: 9px 0;
+
+  @media (max-width: 1920px) {
+    margin-left: 200px;
+    margin-right: 200px;  
+  }
+  @media (max-width: 1199px) {
+   margin-left: 24px;
+   margin-right: 24px; 
+  }
+  @media (max-width: 767px) {
+    margin-left: 16px;
+    margin-right: 16px; 
+  }
 }
 
 .homepage-logo-right {
