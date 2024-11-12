@@ -11,20 +11,43 @@ body {
   color: #374151;
   margin: 0;
   max-width: 1920px;
+  word-break: keep-all;
 }
 
-h1 {
+h1, h2, h3 {
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
 }
+
+.header-title {
+  padding-right: 62px;
+  padding-bottom: 32px;
+}
+
+/* .homepage-logo-container {
+
+} */
 
 .homepage-logo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 9px 200px;
+  padding: 9px 0;
+
+  @media (max-width: 1920px) {
+    margin-left: 200px;
+    margin-right: 200px;  
+  }
+  @media (max-width: 1199px) {
+   margin-left: 24px;
+   margin-right: 24px; 
+  }
+  @media (max-width: 767px) {
+    margin-left: 16px;
+    margin-right: 16px; 
+  }
 }
 
 .homepage-logo-right {
@@ -39,60 +62,173 @@ h1 {
 a:link {
   color: #ffffff;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.home-tf-back {
+.header-container-back {
   display: block;
   background-color: #cfe5ff;
-  padding-top: 100px;
+  height: 540px;
+
+  @media (max-width: 1199px) {
+    margin: 0 0 24px 0;
+   }
 }
 
-.home-tf {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
+.header-container {
+position: relative;
+padding-top: 200px;
+max-width: 1110px;
+margin: 0 auto;
 }
 
-.home-tf-text {
+
+.header-container-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 357px;
+  height: 260px;
+  margin: 40px 7px 40px 0;
 }
 
-#button {
+.main-photo {
+  position: absolute;
+  bottom: -40px;
+  right: 0px;
+}
+
+.button {
   background-color: #3692ff;
   border-radius: 40px;
   padding: 16px 0;
+  margin-bottom: 60px;
   text-align: center;
 }
 
-.photo {
-  width: 100%;
-  height: auto;
-  max-width: 50%; /* 이미지 최대 너비 지정 */
+.middle-photo {
+  width: 579px;
 }
 
 .main-size {
-  margin: 138px auto;
-  padding: 0 100px;
+  max-width: 988px;
+  margin: 0 auto;
+  padding: 138px 0;
+
+  @media (max-width: 1199px) {
+    text-align: center;
+    padding: 0 0 52px 0;
+   }
 }
 
 .middle-background {
+  display: inline-block;
   background-color: #fcfcfc;
   padding: 0 23.5px;
+
+  @media (max-width: 1199px) {
+    margin: 0 24px;
+    padding: 0;
+   }
+  @media (max-width: 767px) {
+  margin: 0 16px;
+  padding: 0;
+  }
 }
 
-.middle-container {
+.middle-container-1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 444px;
   gap: 64px;
+
+  @media (max-width: 1199px) {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 24px;
+    margin-right: 24px; 
+    height: 708px;
+    gap: 0;
+   }
+   @media (max-width: 767px) {
+    flex-direction: column; 
+    margin-left: 16px;
+    margin-right: 16px; 
+   }
+}
+
+.middle-container-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 444px;
+  gap: 64px;
+
+  @media (max-width: 1199px) {
+    position: relative;
+    flex-direction: column-reverse;
+    justify-content: start;
+    margin-left: 24px;
+    margin-right: 24px; 
+    height: 708px;
+    gap: 0;
+   }
+   @media (max-width: 767px) {
+    flex-direction: column; 
+    margin-left: 16px;
+    margin-right: 16px; 
+   }
+}
+
+.middle-container-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 444px;
+  gap: 64px;
+
+  @media (max-width: 1199px) {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 24px;
+    margin-right: 24px; 
+    height: 708px;
+    gap: 0;
+   }
+   @media (max-width: 767px) {
+    flex-direction: column; 
+    margin-left: 16px;
+    margin-right: 16px; 
+   }
 }
 
 .text {
   padding: 12px 0;
+}
+
+.main-text {
+  padding: 12px 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.sub-text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+
+  @media (max-width: 1199px) {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+   }
 }
 
 .text-bule {
@@ -105,13 +241,90 @@ a:link {
 .right-text {
   text-align: right;
   margin: 103px 0;
-  flex-grow: 1;
+  padding-left: 24px;
+  width: 409px;
+  height: 238px;
+
+  @media (max-width: 1199px) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 24px 0 0 0 ;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    width: 100%;
+   }
 }
 
-.left-text {
+.left-text1 {
   text-align: left;
   margin: 103px 0;
-  flex-grow: 1;
+  padding-right: 24px;
+  width: 409px;
+  height: 238px;
+  @media (max-width: 1199px) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 24px 0 0 0 ;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    width: 100%;
+   }
+}
+
+.left-text2 {
+  text-align: left;
+  margin: 103px 0;
+  padding-right: 24px;
+  width: 409px;
+  height: 238px;
+  
+  @media (max-width: 1199px) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 24px 0 0 0 ;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    width: 100%;
+   }
+}
+
+.bottom-container-back {
+  display: block;
+  background-color: #cfe5ff;
+  height: 540px;
+  margin-top: 138px;
+}
+
+.bottom-container {
+position: relative;
+height: 100%;
+padding-top: 143px;
+max-width: 1110px;
+margin: 0 auto;
+}
+
+.bottom-container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 295px;
+  height: 172px;
+  margin-top: 112.5px;
+  /* margin-bottom: 112.5px; */
+  margin-right: 69px;
+  padding-bottom: 60px;
+}
+
+.bottom-photo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .footer-back {
@@ -124,10 +337,14 @@ a:link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  max-width: 1110px;
+  margin: 0 auto;
 }
 
 .codeit {
   color: #9ca3af;
+  margin: 0.5px 0 0.5px;
 }
 
 .footer-center {
@@ -135,4 +352,12 @@ a:link {
   flex-direction: row;
   justify-content: space-around;
   gap: 30px;
+  margin: 0.5px 0 0.5px;
+}
+
+.footer-sns_link {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 12px;
 }
