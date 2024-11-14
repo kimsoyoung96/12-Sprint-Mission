@@ -33,7 +33,7 @@ input {
   padding: 16px 24px;
   border: 0;
   border-radius: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 24px; /* 마지막에 각 div로 묶어야 함*/
 }
 
 input:focus {
@@ -122,4 +122,11 @@ a:link {
 .login-page:link {
   text-decoration: underline;
   color: #3182f6;
+}
+
+.warning {
+  color: #f74747;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
 }
