@@ -14,11 +14,11 @@ body {
   word-break: keep-all;
 }
 
-label {
+.label-title {
   display: block;
   font-weight: 700;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 21px;
   margin-bottom: 16px;
 }
 
@@ -32,6 +32,7 @@ input {
   line-height: 26px;
   width: 100%;
   padding: 15px 24px;
+  height: 56px;
 }
 
 #password-field {
@@ -41,8 +42,10 @@ input {
 .btn-eye {
   position: absolute;
   right: 24px;
-  bottom: 16px;
+  top: 53px;
   cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
 
 #email-field, #password-field {
