@@ -32,6 +32,9 @@ input {
   line-height: 26px;
   width: 100%;
   padding: 15px 24px;
+}
+
+#email-field, #password-field {
   margin-bottom: 24px;
 }
 
