@@ -1,18 +1,20 @@
+// input 값 기준설정
 const EMAIL_REGEXP = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const PASSWORD_MIN_LEN = 8;
 
+// 이메일, 닉네임, 비밀번호, 비밀번호 확인의 각 부모태그(div) id
 const formContainer = document.querySelector('.form-container');
 const emailField = document.querySelector('#email-field');
 const niknameField = document.querySelector('#nikname-field');
 const passwordField = document.querySelector('#password-field');
 const passwordRepeatField = document.querySelector('#password-repeat-field');
-
+// 각각 에러메세지 태그
 const emailErrorMessage = document.querySelector('#email-field .error-message');
 const niknameErrorMessage = document.querySelector('#nikname-field .error-message');
 const passwordErrorMessage = document.querySelector('#password-field .error-message');
 const passwordRepeatErrorMessage = document.querySelector('#password-repeat-field .error-message');
 
-
+// input값이 변하면 발생하는 이벤트 추가
 formContainer.addEventListener('input', handleFormInput);
 
 function handleFormInput(e) {
@@ -89,3 +91,19 @@ function handleFormInput(e) {
     }
   }
 }
+
+// input값이 변하면 disabled을 동작시키는 이벤트 추가
+const btnBox = document.querySelector('.box');
+
+function activeBtn() {
+  const btn = document.querySelector('.join');
+  const btnEmail = document.querySelector('.btn-email').value;
+  const btnNikname = document.querySelector('.btn-nikname').value;
+  const btnPassword = document.querySelector('.btn-password').value;
+  const btnPasswordRepeat = document.querySelector('.btn-password-repeat').value;
+
+  btn.disabled = !(EMAIL_REGEXP.test(btnEmail) && (btnNikname) &&
+  (btnPassword.length >= PASSWORD_MIN_LEN) && (btnPasswordRepeat === btnPassword))
+}
+
+btnBox.addEventListener('input', activeBtn)
