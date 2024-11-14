@@ -5,9 +5,13 @@ const formContainer = document.querySelector('.form-container');
 const emailField = document.querySelector('#email-field');
 const niknameField = document.querySelector('#nikname-field');
 const passwordField = document.querySelector('#password-field');
+const passwordRepeatField = document.querySelector('#password-repeat-field');
+
 const emailErrorMessage = document.querySelector('#email-field .error-message');
 const niknameErrorMessage = document.querySelector('#nikname-field .error-message');
 const passwordErrorMessage = document.querySelector('#password-field .error-message');
+const passwordRepeatErrorMessage = document.querySelector('#password-repeat-field .error-message');
+
 
 formContainer.addEventListener('input', handleFormInput);
 
@@ -70,20 +74,16 @@ function handleFormInput(e) {
       break;
     }
 
-    // case 'password-repeat': {
-    //   const password = form['password'].value;
-    //   const passwordRepeat = form['password-repeat'].value;
-    //   const passwordEqualityCheck = password === passwordRepeat;
-    //   const passwordLengthCheck = (password.length >= PASSWORD_MIN_LEN) &&
-    //   (passwordRepeat >= PASSWORD_MIN_LEN)
-    //   const totalPassword = passwordEqualityCheck && passwordLengthCheck
-    //   passwordErrorMessage.classList.toggle('warning', !totalPassword);
-    //   if (!passwordEqualityCheck) {
-    //     passwordErrorMessage.textContent = '비밀번호가 일치하지 않습니다.'
-    //   }
-    //   if (!passwordLengthCheck) {
-    //     passwordErrorMessage.textContent = `비밀번호는 ${PASSWORD_MIN_LEN}자 이상 입력해주세요.`
-    //   }
-    // }
+    case 'password-repeat': {
+      const password = form['password'].value; // 비교하는 용도
+      const passwordRepeat = form['password-repeat'].value;
+      const passwordEqualityCheck = password === passwordRepeat;
+      passwordRepeatErrorMessage.classList.toggle('warning', !passwordEqualityCheck);
+      passwordRepeatErrorMessage.textContent = passwordEqualityCheck
+      ? ''
+      : '비밀번호가 일치하지 않습니다..';
+
+      break;
+    }
   }
 }
