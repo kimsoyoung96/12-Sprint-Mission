@@ -1,4 +1,3 @@
-// // 이메일 형식 에러메세지 추가
 const EMAIL_REGEXP = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const PASSWORD_MIN_LEN = 8;
 
@@ -18,11 +17,25 @@ function handleFormInput(e) {
 
   switch (input.name) {
     case 'email': {
-      const mailCheck = form['email'].value;
-      emailErrorMessage.classList.toggle('warning', !mailCheck);
-      emailErrorMessage.textContent = mailCheck
+      const mailValueCheck = form['email'].value;
+      const mailFormCheck = EMAIL_REGEXP.test(mailValueCheck);
+
+      if (!mailValueCheck) {
+        emailErrorMessage.classList.toggle('warning', !mailValueCheck);
+        emailErrorMessage.textContent = mailValueCheck
       ? ''
       : '이메일을 입력해주세요.';
+      } else {
+        if (!mailFormCheck) {
+          emailErrorMessage.classList.toggle('warning', !mailFormCheck);
+          emailErrorMessage.textContent = mailFormCheck
+        ? ''
+        : '잘못된 이메일 형식입니다.';
+        } else {
+          emailErrorMessage.textContent = ''
+        }
+      }
+      
       break;
     }
 
