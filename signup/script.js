@@ -22,6 +22,7 @@ function handleFormInput(e) {
       : '이메일을 입력해주세요.';
       break;
     }
+
     case 'nikname': {
       const niknameCheck = form['nikname'].value;
       niknameErrorMessage.classList.toggle('warning', !niknameCheck);
@@ -30,12 +31,9 @@ function handleFormInput(e) {
       : '닉네임을 입력해주세요.';
       break;
     }
-    // case 'password': {
-    //   dsaf
-
-    // }
-    // case 'password-check': {
-    //   asdf
-    // }
+    case 'password':
+    case 'password-check': {
+      asdf
+    }
   }
 }
