@@ -42,6 +42,7 @@ input {
   position: absolute;
   right: 24px;
   bottom: 16px;
+  cursor: pointer;
 }
 
 #email-field, #password-field {
@@ -95,6 +96,7 @@ input:focus {
   border-radius: 40px;
   border: none;
   padding: 16px 124px;
+  cursor: pointer;
 }
 
 a:link {
@@ -123,6 +125,7 @@ a:link {
 .easy-login-sns {
   display: flex;
   gap: 16px;
+  cursor: pointer;
 }
 
 .join {
