@@ -45,7 +45,7 @@ function handleFormInput(e) {
     }
     case 'password': {
       const password = form['password'].value;
-      const passwordLengthCheck = password.length >= PASSWORD_MIN_LEN
+      const passwordLengthCheck = password.length >= PASSWORD_MIN_LEN;
       if (!password) {
         passwordField.classList.toggle('warning', !password);
         passwordErrorMessage.textContent = password
@@ -76,7 +76,12 @@ function activeBtn() {
   const btnEmail = document.querySelector('.btn-email').value;
   const btnPassword = document.querySelector('.btn-password').value;
 
-  btn.disabled = !(EMAIL_REGEXP.test(btnEmail) && (btnPassword.length >= PASSWORD_MIN_LEN))
+  btn.disabled = !(EMAIL_REGEXP.test(btnEmail) && (btnPassword.length >= PASSWORD_MIN_LEN));
 }
 
-btnBox.addEventListener('input', activeBtn)
+btnBox.addEventListener('input', activeBtn);
+
+// 버튼 활성화 시 클릭하면 페이지 이동하는 함수
+function page() {
+  window.location.href = ''
+}
