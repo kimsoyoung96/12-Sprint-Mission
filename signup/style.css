@@ -130,3 +130,11 @@ a:link {
   font-weight: 600;
   line-height: 24px;
 }
+
+.label-title {
+  color: #1f2937;
+}
+
+.warning > input {
+  border: 1px solid #f74747;
+}

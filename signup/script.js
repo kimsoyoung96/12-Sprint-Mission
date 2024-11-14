@@ -25,13 +25,13 @@ function handleFormInput(e) {
       const mailFormCheck = EMAIL_REGEXP.test(mailValueCheck);
 
       if (!mailValueCheck) {
-        emailErrorMessage.classList.toggle('warning', !mailValueCheck);
+        emailField.classList.toggle('warning', !mailValueCheck);
         emailErrorMessage.textContent = mailValueCheck
       ? ''
       : '이메일을 입력해주세요.';
       } else {
         if (!mailFormCheck) {
-          emailErrorMessage.classList.toggle('warning', !mailFormCheck);
+          emailField.classList.toggle('warning', !mailFormCheck);
           emailErrorMessage.textContent = mailFormCheck
         ? ''
         : '잘못된 이메일 형식입니다.';
