@@ -133,3 +133,7 @@ a:link {
 .label-title {
   color: #1f2937;
 }
+
+.warning > input {
+  border: 1px solid #f74747;
+}
