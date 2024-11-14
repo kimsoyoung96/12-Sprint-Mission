@@ -33,8 +33,12 @@ input {
   padding: 16px 24px;
   border: 0;
   border-radius: 12px;
-  margin-bottom: 24px; /* 마지막에 각 div로 묶어야 함*/
 }
+
+#email-field, #nikname-field, #password-field, #password-repeat-field {
+  margin-bottom: 24px;
+}
+
 
 input:focus {
   outline:1px solid #3692ff;
