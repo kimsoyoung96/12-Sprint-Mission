@@ -138,3 +138,8 @@ a:link {
 .warning > input {
   border: 1px solid #f74747;
 }
+
+.box > :disabled {
+  background-color: #9ca3af;
+  color: #f3f4f6;
+}

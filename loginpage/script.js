@@ -72,7 +72,7 @@ function handleFormInput(e) {
 const btnBox = document.querySelector('.box');
 
 function activeBtn() {
-  const btn = document.querySelector('.join');
+  const btn = document.querySelector('.button');
   const btnEmail = document.querySelector('.btn-email').value;
   const btnPassword = document.querySelector('.btn-password').value;
 
