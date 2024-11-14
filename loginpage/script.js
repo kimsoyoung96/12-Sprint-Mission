@@ -67,3 +67,16 @@ function handleFormInput(e) {
     }
   }
 }
+
+// input값이 변하면 disabled을 동작시키는 이벤트 추가
+const btnBox = document.querySelector('.box');
+
+function activeBtn() {
+  const btn = document.querySelector('.join');
+  const btnEmail = document.querySelector('.btn-email').value;
+  const btnPassword = document.querySelector('.btn-password').value;
+
+  btn.disabled = !(EMAIL_REGEXP.test(btnEmail) && (btnPassword.length >= PASSWORD_MIN_LEN))
+}
+
+btnBox.addEventListener('input', activeBtn)
