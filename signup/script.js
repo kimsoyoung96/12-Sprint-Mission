@@ -114,20 +114,37 @@ function page() {
 }
 
 // 패스워드 토글 아이콘
-
-const btnToggleField = document.querySelector('.btn-toggle-field');
-const btnToggle = document.querySelector('.btn-toggle');
+const btnToggle = document.querySelector('.btn1-toggle');
+const btnToggleField = document.querySelector('.btn1-toggle-field');
 const btnPassword = document.querySelector('#password-field .btn-password');
-const img = document.querySelector('.icon-toggle');
+const img1 = document.querySelector('.icon1-toggle');
 
 btnToggle.addEventListener('click', function(e) {
   btnPassword.classList.toggle('active')
   
   if(btnPassword.type === 'password') {
     btnPassword.type = 'text';
-    img.setAttribute("src", "/img/btn_visibility_on.png");
+    img1.setAttribute("src", "/img/btn_visibility_on.png");
   } else {
     btnPassword.type = 'password';
-    img.setAttribute("src", "/img/btn_visibility_off.png");
+    img1.setAttribute("src", "/img/btn_visibility_off.png");
+  }
+})
+
+//
+const repeatBtnToggle = document.querySelector('.btn2-toggle');
+const repeatBtnToggleField = document.querySelector('.btn2-toggle-field');
+const repeatBtnPassword = document.querySelector('#password-repeat-field .btn-password-repeat');
+const img2 = document.querySelector('.icon2-toggle');
+
+repeatBtnToggle.addEventListener('click', function(e) {
+  repeatBtnPassword.classList.toggle('active')
+  
+  if(repeatBtnPassword.type === 'password') {
+    repeatBtnPassword.type = 'text';
+    img2.setAttribute("src", "/img/btn_visibility_on.png");
+  } else {
+    repeatBtnPassword.type = 'password';
+    img2.setAttribute("src", "/img/btn_visibility_off.png");
   }
 })
