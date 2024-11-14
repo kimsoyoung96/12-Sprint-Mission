@@ -5,9 +5,11 @@ const PASSWORD_MIN_LEN = 8;
 // 이메일, 닉네임, 비밀번호, 비밀번호 확인의 각 부모태그(div) id
 const formContainer = document.querySelector('.form-container');
 const emailField = document.querySelector('#email-field');
+const passwordField = document.querySelector('#password-field');
 
 // 각각 에러메세지 태그
 const emailErrorMessage = document.querySelector('#email-field .error-message');
+const passwordErrorMessage = document.querySelector('#password-field .error-message');
 
 
 // input값이 변하면 발생하는 이벤트 추가
@@ -36,6 +38,28 @@ function handleFormInput(e) {
         } else {
           emailField.classList.toggle('warning', !mailFormCheck);
           emailErrorMessage.textContent = ''
+        }
+      }
+      
+      break;
+    }
+    case 'password': {
+      const password = form['password'].value;
+      const passwordLengthCheck = password.length >= PASSWORD_MIN_LEN
+      if (!password) {
+        passwordField.classList.toggle('warning', !password);
+        passwordErrorMessage.textContent = password
+      ? ''
+      : '비밀번호를 입력해주세요.';
+      } else {
+        if (!passwordLengthCheck) {
+          passwordField.classList.toggle('warning', !passwordLengthCheck);
+          passwordErrorMessage.textContent = passwordLengthCheck
+        ? ''
+        : `비밀번호는 ${PASSWORD_MIN_LEN}자 이상 입력해주세요.`;
+        } else {
+          passwordField.classList.toggle('warning', !passwordLengthCheck);
+          passwordErrorMessage.textContent = ''
         }
       }
       
