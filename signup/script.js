@@ -107,3 +107,8 @@ function activeBtn() {
 }
 
 btnBox.addEventListener('input', activeBtn)
+
+// 버튼 활성화 시 클릭하면 페이지 이동하는 함수
+function page() {
+  window.location.href = ''
+}
