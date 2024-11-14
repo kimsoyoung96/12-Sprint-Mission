@@ -46,7 +46,7 @@ function handleFormInput(e) {
 
     case 'nikname': {
       const niknameCheck = form['nikname'].value;
-      niknameErrorMessage.classList.toggle('warning', !niknameCheck);
+      niknameField.classList.toggle('warning', !niknameCheck);
       niknameErrorMessage.textContent = niknameCheck
       ? ''
       : '닉네임을 입력해주세요.';
@@ -57,13 +57,13 @@ function handleFormInput(e) {
       const password = form['password'].value;
       const passwordLengthCheck = password.length >= PASSWORD_MIN_LEN
       if (!password) {
-        passwordErrorMessage.classList.toggle('warning', !password);
+        passwordField.classList.toggle('warning', !password);
         passwordErrorMessage.textContent = password
       ? ''
       : '비밀번호를 입력해주세요.';
       } else {
         if (!passwordLengthCheck) {
-          passwordErrorMessage.classList.toggle('warning', !passwordLengthCheck);
+          passwordField.classList.toggle('warning', !passwordLengthCheck);
           passwordErrorMessage.textContent = passwordLengthCheck
         ? ''
         : `비밀번호는 ${PASSWORD_MIN_LEN}자 이상 입력해주세요.`;
@@ -79,7 +79,7 @@ function handleFormInput(e) {
       const password = form['password'].value; // 비교하는 용도
       const passwordRepeat = form['password-repeat'].value;
       const passwordEqualityCheck = password === passwordRepeat;
-      passwordRepeatErrorMessage.classList.toggle('warning', !passwordEqualityCheck);
+      passwordRepeatField.classList.toggle('warning', !passwordEqualityCheck);
       passwordRepeatErrorMessage.textContent = passwordEqualityCheck
       ? ''
       : '비밀번호가 일치하지 않습니다..';
