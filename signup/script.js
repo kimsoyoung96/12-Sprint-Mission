@@ -3,7 +3,9 @@ const EMAIL_REGEXP = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 const formContainer = document.querySelector('.form-container');
 const emailField = document.querySelector('#email-field');
+const niknameField = document.querySelector('#nikname-field');
 const emailErrorMessage = document.querySelector('#email-field .error-message');
+const niknameErrorMessage = document.querySelector('#nikname-field .error-message');
 
 formContainer.addEventListener('input', handleFormInput);
 
@@ -20,9 +22,14 @@ function handleFormInput(e) {
       : '이메일을 입력해주세요.';
       break;
     }
-    // case 'nikname': {
-
-    // }
+    case 'nikname': {
+      const niknameCheck = form['nikname'].value;
+      niknameErrorMessage.classList.toggle('warning', !niknameCheck);
+      niknameErrorMessage.textContent = niknameCheck
+      ? ''
+      : '닉네임을 입력해주세요.';
+      break;
+    }
     // case 'password': {
     //   dsaf
 
