@@ -40,7 +40,7 @@ input {
   position: relative;
 }
 
-.btn-eye {
+.btn-toggle-field {
   position: absolute;
   right: 24px;
   top: 53px;
