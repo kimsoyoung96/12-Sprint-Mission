@@ -129,3 +129,7 @@ a:link {
   font-weight: 600;
   line-height: 24px;
 }
+
+.label-title {
+  color: #1f2937;
+}
