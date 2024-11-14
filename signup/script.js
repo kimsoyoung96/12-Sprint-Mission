@@ -68,6 +68,7 @@ function handleFormInput(e) {
         ? ''
         : `비밀번호는 ${PASSWORD_MIN_LEN}자 이상 입력해주세요.`;
         } else {
+          passwordField.classList.toggle('warning', !passwordLengthCheck);
           passwordErrorMessage.textContent = ''
         }
       }
