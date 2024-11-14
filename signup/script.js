@@ -131,7 +131,7 @@ btnToggle.addEventListener('click', function(e) {
   }
 })
 
-//
+// 패스워드 확인 토글 아이콘
 const repeatBtnToggle = document.querySelector('.btn2-toggle');
 const repeatBtnToggleField = document.querySelector('.btn2-toggle-field');
 const repeatBtnPassword = document.querySelector('#password-repeat-field .btn-password-repeat');

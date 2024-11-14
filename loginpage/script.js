@@ -85,3 +85,21 @@ btnBox.addEventListener('input', activeBtn);
 function page() {
   window.location.href = ''
 }
+
+// 패스워드 토글 아이콘
+const btnToggle = document.querySelector('.btn-toggle');
+const btnToggleField = document.querySelector('.btn-toggle-field');
+const btnPassword = document.querySelector('#password-field .btn-password');
+const img = document.querySelector('.icon-toggle');
+
+btnToggle.addEventListener('click', function(e) {
+  btnPassword.classList.toggle('active')
+  
+  if(btnPassword.type === 'password') {
+    btnPassword.type = 'text';
+    img.setAttribute("src", "/img/btn_visibility_on.png");
+  } else {
+    btnPassword.type = 'password';
+    img.setAttribute("src", "/img/btn_visibility_off.png");
+  }
+})
