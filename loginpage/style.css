@@ -122,3 +122,10 @@ a:link {
   text-decoration: underline;
   color: #3692ff;
 }
+
+.warning {
+  color: #f74747;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+}
