@@ -36,6 +36,7 @@ function handleFormInput(e) {
         ? ''
         : '잘못된 이메일 형식입니다.';
         } else {
+          emailField.classList.toggle('warning', !mailFormCheck);
           emailErrorMessage.textContent = ''
         }
       }
