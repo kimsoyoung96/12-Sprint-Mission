@@ -34,6 +34,16 @@ input {
   padding: 15px 24px;
 }
 
+#password-field {
+  position: relative;
+}
+
+.btn-eye {
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
+}
+
 #email-field, #password-field {
   margin-bottom: 24px;
 }
