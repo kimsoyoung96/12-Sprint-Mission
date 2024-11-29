@@ -25,6 +25,7 @@
 
 .Home .nav_logo {
   justify-content: flex-start;
+  cursor: pointer;
 }
 
 .Home .nav_center {
@@ -34,7 +35,17 @@
   white-space: nowrap;
 }
 
+.Home .nav_center button {
+  border: none;
+  background-color: #ffffff;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700px;
+  cursor: pointer;
+}
+
 .Home .nav_user {
   justify-content: flex-end;
   padding: 5px 0 6px;
+  cursor: pointer;
 }

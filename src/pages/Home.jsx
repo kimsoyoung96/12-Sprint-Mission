@@ -9,8 +9,8 @@ const Home = () => {
         <img src={Nav_logo} />
       </div>
       <div className="nav_center">
-        <div>자유게시판</div>
-        <div>중고마켓</div>
+        <button>자유게시판</button>
+        <button>중고마켓</button>
       </div>
       <div className="nav_user">
         <img src={Nav_user} />
