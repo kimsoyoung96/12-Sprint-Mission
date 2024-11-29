@@ -1,8 +1,8 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home.js';
-import Additem from './pages/Additem.js';
-import Notfound from './pages/Notfound.js';
+import Home from './pages/Home.jsx';
+import Additem from './pages/Additem.jsx';
+import Notfound from './pages/Notfound.jsx';
 
 function App() {
   return (
