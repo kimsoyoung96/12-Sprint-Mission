@@ -19,7 +19,7 @@
   }
 }
 
-.Nav div {
+.Nav .nav_button {
   display: flex;
   gap: 30px;
 }

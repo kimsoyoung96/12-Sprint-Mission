@@ -10,13 +10,18 @@ const Home = () => {
       <Nav
         leftChild={<img src={Nav_logo} />}
         center={
-          <div>
+          <div className="nav_button">
             <Button text={'자유게시판'} />
             <Button text={'중고마켓'} />
           </div>
         }
         rightChild={<img src={Nav_user} />}
       />
+      {/* 아래는 상품 */}
+      <div className="item">
+        <div>베스트 상품</div>
+        <div>전체 상품</div>
+      </div>
     </div>
   );
 };
