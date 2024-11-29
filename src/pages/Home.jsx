@@ -1,6 +1,7 @@
 import './Home.css';
 import Nav_logo from '../assets/nav_panda_logo_img.png';
 import Nav_user from '../assets/nav_user_img.png';
+import Button from '../components/Button';
 
 const Home = () => {
   return (
@@ -9,8 +10,8 @@ const Home = () => {
         <img src={Nav_logo} />
       </div>
       <div className="nav_center">
-        <button>자유게시판</button>
-        <button>중고마켓</button>
+        <Button text={'자유게시판'} />
+        <Button text={'중고마켓'} />
       </div>
       <div className="nav_user">
         <img src={Nav_user} />

@@ -1,0 +1,14 @@
+.Button {
+  border: none;
+  padding: 0;
+  background-color: #ffffff;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700px;
+  cursor: pointer;
+}
+
+/*type ItemAdd = 상품 등록하기에 쓸 버튼*/
+.Button_ItemAdd {
+  background-color: #3692ff;
+}
