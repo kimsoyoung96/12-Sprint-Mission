@@ -1,0 +1,25 @@
+.Home {
+  display: flex;
+  align-items: center;
+  gap: 47px;
+  padding: 10px 0 9px;
+}
+
+.Home > div {
+  display: flex;
+}
+
+.Home .nav_logo {
+  justify-content: flex-start;
+}
+
+.Home .nav_center {
+  flex: 1;
+  gap: 30px;
+  padding: 11px 0 12px;
+}
+
+.Home .nav_user {
+  justify-content: flex-end;
+  padding: 5px 0 6px;
+}

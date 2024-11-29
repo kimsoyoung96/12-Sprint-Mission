@@ -1,3 +1,4 @@
+import './Home.css';
 import Nav_logo from '../assets/nav_panda_logo_img.png';
 import Nav_user from '../assets/nav_user_img.png';
 
