@@ -6,11 +6,11 @@ const Bestitem = ({ items }) => {
     <div className="Bestitem">
       {items.map((item) => {
         return (
-          <div>
-            <div>{<img src={item.images} />}</div>
-            <div>{item.name}</div>
-            <div>{item.price}원</div>
-            <div>
+          <div className="BestiemContainer">
+            <div className="itemImg">{<img src={item.images} />}</div>
+            <div className="itemName">{item.name}</div>
+            <div className="itemPrice">{item.price.toLocaleString()}원</div>
+            <div className="itemFavorit">
               <img src={favorit_img} />
               {item.favoriteCount}
             </div>
