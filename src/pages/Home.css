@@ -1,0 +1,12 @@
+.item_title {
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.Home .item {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}

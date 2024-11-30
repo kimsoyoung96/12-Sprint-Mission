@@ -22,6 +22,7 @@ const Home = () => {
       />
       {/* 아래는 상품 */}
       <div className="item">
+        <div className="item_title">베스트 아이템</div>
         <Bestitem items={items} />
         {/* <Totalitem /> */}
       </div>
