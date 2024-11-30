@@ -7,6 +7,7 @@ import Bestitem from '../components/Bestitem';
 import Totalitem from '../components/Totalitem';
 import items from '../mockdata.json';
 import totalitems from '../totalitems_data.json';
+import Itemtitle from '../components/Itemtitle';
 
 const Home = () => {
   return (
@@ -23,8 +24,17 @@ const Home = () => {
       />
       {/* 아래는 상품 */}
       <div className="item">
-        <div className="item_title">베스트 아이템</div>
+        <div className="item_title">
+          <Itemtitle leftChild={'베스트 상품'} />
+        </div>
         <Bestitem items={items} />
+        <div className="item_title">
+          <Itemtitle
+            leftChild={'전체 상품'}
+            center={<input />}
+            rightChild={<select></select>}
+          />
+        </div>
         <Totalitem totalitems={totalitems} />
       </div>
     </div>
