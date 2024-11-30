@@ -11,6 +11,10 @@
   flex-direction: column;
 }
 
+.BestiemContainer .itemImg {
+  cursor: pointer;
+}
+
 .Bestitem .itemImg img {
   width: 282px;
   height: 282px;
@@ -22,6 +26,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
+  cursor: pointer;
 }
 
 .itemPrice {
