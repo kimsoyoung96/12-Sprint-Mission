@@ -6,6 +6,7 @@ import Nav from '../components/Nav';
 import Bestitem from '../components/Bestitem';
 import Totalitem from '../components/Totalitem';
 import items from '../mockdata.json';
+import totalitems from '../totalitems_data.json';
 
 const Home = () => {
   return (
@@ -24,7 +25,7 @@ const Home = () => {
       <div className="item">
         <div className="item_title">베스트 아이템</div>
         <Bestitem items={items} />
-        {/* <Totalitem /> */}
+        <Totalitem totalitems={totalitems} />
       </div>
     </div>
   );
