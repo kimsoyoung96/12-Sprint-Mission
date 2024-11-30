@@ -1,0 +1,9 @@
+.Bestitem {
+  display: flex;
+  flex-direction: row;
+}
+.Bestitem > div {
+  display: flex;
+  width: 282px;
+  height: 282px;
+}
