@@ -11,4 +11,9 @@
 /*type ItemAdd = 상품 등록하기에 쓸 버튼*/
 .Button_ItemAdd {
   background-color: #3692ff;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 26px;
 }

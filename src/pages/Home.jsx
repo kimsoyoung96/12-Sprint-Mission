@@ -31,8 +31,14 @@ const Home = () => {
         <div className="item_title">
           <Itemtitle
             leftChild={'전체 상품'}
-            center={<input />}
-            rightChild={<select></select>}
+            searchInput={<input placeholder="검색할 상품을 입력해주세요" />}
+            searchBtn={<Button text={'상품 등록하기'} type={'ItemAdd'} />}
+            rightChild={
+              <select>
+                <option>최신순</option>
+                <option>좋아요순</option>
+              </select>
+            }
           />
         </div>
         <Totalitem totalitems={totalitems} />

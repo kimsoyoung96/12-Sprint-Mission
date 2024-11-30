@@ -1,0 +1,9 @@
+.Itemtitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Itemtitle .Item_text {
+  flex: 1;
+}
