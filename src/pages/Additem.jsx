@@ -31,20 +31,24 @@ const Additem = () => {
         </div>
         <div className="edit_info">
           <Editsection
+            topChlid={<Edittext text={'상품 이미지'} />}
+            center={<Editinput type={'img'} />}
+          />
+          <Editsection
             topChlid={<Edittext text={'상품명'} />}
             center={
-              <Editinput type={'name'} placeholder={'상품명을 입력해주세요'} />
+              <Editinput info={'name'} placeholder={'상품명을 입력해주세요'} />
             }
           />
           <Editsection
             topChlid={<Edittext text={'상품 소개'} />}
             center={
               <Editinput
-                type={'info'}
+                info={'info'}
                 placeholder={'상품 소개를 입력해주세요'}
               />
             }
-          />{' '}
+          />
         </div>
       </div>
     </div>
