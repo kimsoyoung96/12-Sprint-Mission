@@ -8,6 +8,7 @@ import Totalitem from '../components/Totalitem';
 import items from '../mockdata.json';
 import totalitems from '../totalitems_data.json';
 import Itemtitle from '../components/Itemtitle';
+import Pagenation from '../components/Pagenation';
 
 const Home = () => {
   return (
@@ -42,6 +43,9 @@ const Home = () => {
           />
         </div>
         <Totalitem totalitems={totalitems} />
+      </div>
+      <div>
+        <Pagenation />
       </div>
     </div>
   );
