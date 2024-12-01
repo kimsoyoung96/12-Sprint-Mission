@@ -17,3 +17,27 @@
 .Editinput_info {
   height: 282px;
 }
+
+.image-upload {
+  background-color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 282px;
+  height: 282px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.upload_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 12px;
+  color: #9ca3af;
+}
+
+.hidden_input {
+  display: none;
+}

@@ -22,7 +22,7 @@ const Additem = () => {
         rightChild={<img src={Nav_user} />}
       />
       {/* 아래는 상품등록 페이지 구현 */}
-      <div className="edit">
+      <form className="edit">
         <div className="edit_title">
           <Itemtitle
             leftChild={'상품 등록하기'}
@@ -50,7 +50,7 @@ const Additem = () => {
             }
           />
         </div>
-      </div>
+      </form>
     </div>
   );
 };
