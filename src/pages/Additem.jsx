@@ -49,6 +49,22 @@ const Additem = () => {
               />
             }
           />
+          <Editsection
+            topChlid={<Edittext text={'판매가격'} />}
+            center={
+              <Editinput
+                info={'price'}
+                placeholder={'판매 가격을 입력해주세요'}
+              />
+            }
+          />
+          <Editsection
+            topChlid={<Edittext text={'태그'} />}
+            center={
+              <Editinput info={'tag'} placeholder={'태그를 입력해주세요'} />
+            }
+            bottonChild={'태그달부분'}
+          />
         </div>
       </form>
     </div>
