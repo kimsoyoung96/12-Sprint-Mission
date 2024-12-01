@@ -18,7 +18,7 @@ const Home = () => {
         center={
           <div className="nav_button">
             <Button text={'자유게시판'} />
-            <Button text={'중고마켓'} />
+            <Button text={'중고마켓'} type={'nav_activate'} />
           </div>
         }
         rightChild={<img src={Nav_user} />}

@@ -8,6 +8,10 @@
   cursor: pointer;
 }
 
+.Button_nav_activate {
+  color: #3692ff;
+}
+
 /*type ItemAdd = 상품 등록하기에 쓸 버튼*/
 .Button_ItemAdd {
   background-color: #3692ff;
