@@ -31,12 +31,14 @@ const Additem = () => {
             rightChild={<Button text={'등록'} type={'register'} />}
           />
         </div>
-        <Editsection
-          topChlid={<Edittext text={'상품 이미지'} />}
-          center={
-            <Editinput type={'name'} placeholder={'상품명을 입력해주세요'} />
-          }
-        />
+        <div className="edit_info">
+          <Editsection
+            topChlid={<Edittext text={'상품 이미지'} />}
+            center={
+              <Editinput type={'name'} placeholder={'상품명을 입력해주세요'} />
+            }
+          />
+        </div>
       </div>
     </div>
   );

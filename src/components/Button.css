@@ -1,4 +1,7 @@
 .Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   padding: 0;
   background-color: #ffffff;
@@ -28,6 +31,7 @@
 .Button_register {
   background-color: #9ca3af;
   color: #f3f4f6;
+  height: 42px;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 600;

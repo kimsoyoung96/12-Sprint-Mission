@@ -1,4 +1,4 @@
-// import './Editsection.css';
+import './Edittext.css';
 
 const Edittext = ({ text }) => {
   return (
