@@ -1,0 +1,19 @@
+.Editinput {
+  max-width: 1200px;
+  width: 100%;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  resize: none;
+}
+
+.Editinput_name,
+.Editinput_price,
+.Editinput_tag {
+  height: 56px;
+}
+
+.Editinput_info {
+  height: 282px;
+}

@@ -4,6 +4,11 @@ import Nav_logo from '../assets/nav_panda_logo_img.png';
 import Nav_user from '../assets/nav_user_img.png';
 import Button from '../components/Button';
 import Itemtitle from '../components/Itemtitle';
+// import Edittext from '../components/Edittext';
+// import Editinput from '../components/Editinput';
+import Editsection from '../components/Editsection';
+import Edittext from '../components/Edittext';
+import Editinput from '../components/Editinput';
 
 const Additem = () => {
   return (
@@ -26,6 +31,12 @@ const Additem = () => {
             rightChild={<Button text={'등록'} type={'register'} />}
           />
         </div>
+        <Editsection
+          topChlid={<Edittext text={'상품 이미지'} />}
+          center={
+            <Editinput type={'name'} placeholder={'상품명을 입력해주세요'} />
+          }
+        />
       </div>
     </div>
   );
