@@ -1,11 +1,5 @@
-import './Edittext.css';
-
 const Edittext = ({ text }) => {
-  return (
-    <div className="Edittext">
-      <div className="edit_text">{text}</div>
-    </div>
-  );
+  return <div className="Edittext">{text}</div>;
 };
 
 export default Edittext;

@@ -4,8 +4,6 @@ import Nav_logo from '../assets/nav_panda_logo_img.png';
 import Nav_user from '../assets/nav_user_img.png';
 import Button from '../components/Button';
 import Itemtitle from '../components/Itemtitle';
-// import Edittext from '../components/Edittext';
-// import Editinput from '../components/Editinput';
 import Editsection from '../components/Editsection';
 import Edittext from '../components/Edittext';
 import Editinput from '../components/Editinput';
@@ -33,11 +31,20 @@ const Additem = () => {
         </div>
         <div className="edit_info">
           <Editsection
-            topChlid={<Edittext text={'상품 이미지'} />}
+            topChlid={<Edittext text={'상품명'} />}
             center={
               <Editinput type={'name'} placeholder={'상품명을 입력해주세요'} />
             }
           />
+          <Editsection
+            topChlid={<Edittext text={'상품 소개'} />}
+            center={
+              <Editinput
+                type={'info'}
+                placeholder={'상품 소개를 입력해주세요'}
+              />
+            }
+          />{' '}
         </div>
       </div>
     </div>

@@ -1,0 +1,10 @@
+.Editsection {
+  margin-bottom: 32px;
+}
+
+.Editsection .edit_text {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
