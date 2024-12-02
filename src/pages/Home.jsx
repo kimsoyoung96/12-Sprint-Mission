@@ -10,6 +10,7 @@ import totalitems from '../totalitems_data.json';
 import Itemtitle from '../components/Itemtitle';
 import Pagenation from '../components/Pagenation';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Home = () => {
   return (
@@ -25,33 +26,35 @@ const Home = () => {
         rightChild={<img src={Nav_user} />}
       />
       {/* 아래는 상품 */}
-      <div className="item">
-        <div className="item_title">
-          <Itemtitle leftChild={'베스트 상품'} />
+      <form>
+        <div className="item">
+          <div className="item_title">
+            <Itemtitle leftChild={'베스트 상품'} />
+          </div>
+          <Bestitem items={items} />
+          <div className="item_title">
+            <Itemtitle
+              leftChild={'전체 상품'}
+              searchInput={<input placeholder="검색할 상품을 입력해주세요" />}
+              searchBtn={
+                <Link to="/additem">
+                  <Button text={'상품 등록하기'} type={'ItemAdd'} />
+                </Link>
+              }
+              rightChild={
+                <select>
+                  <option value={'new'}>최신순</option>
+                  <option value={'like'}>좋아요순</option>
+                </select>
+              }
+            />
+          </div>
+          <Totalitem totalitems={totalitems} />
         </div>
-        <Bestitem items={items} />
-        <div className="item_title">
-          <Itemtitle
-            leftChild={'전체 상품'}
-            searchInput={<input placeholder="검색할 상품을 입력해주세요" />}
-            searchBtn={
-              <Link to="/additem">
-                <Button text={'상품 등록하기'} type={'ItemAdd'} />
-              </Link>
-            }
-            rightChild={
-              <select>
-                <option>최신순</option>
-                <option>좋아요순</option>
-              </select>
-            }
-          />
+        <div>
+          <Pagenation />
         </div>
-        <Totalitem totalitems={totalitems} />
-      </div>
-      <div>
-        <Pagenation />
-      </div>
+      </form>
     </div>
   );
 };
