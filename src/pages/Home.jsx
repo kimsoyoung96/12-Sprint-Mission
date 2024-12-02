@@ -9,6 +9,7 @@ import items from '../mockdata.json';
 import totalitems from '../totalitems_data.json';
 import Itemtitle from '../components/Itemtitle';
 import Pagenation from '../components/Pagenation';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -33,7 +34,11 @@ const Home = () => {
           <Itemtitle
             leftChild={'전체 상품'}
             searchInput={<input placeholder="검색할 상품을 입력해주세요" />}
-            searchBtn={<Button text={'상품 등록하기'} type={'ItemAdd'} />}
+            searchBtn={
+              <Link to="/additem">
+                <Button text={'상품 등록하기'} type={'ItemAdd'} />
+              </Link>
+            }
             rightChild={
               <select>
                 <option>최신순</option>

@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <Routes>
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/items" element={<Home />} />
         <Route path="/additem" element={<Additem />} />
         <Route path="*" element={<Notfound />} />
