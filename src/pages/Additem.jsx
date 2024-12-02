@@ -7,6 +7,7 @@ import Itemtitle from '../components/Itemtitle';
 import Editsection from '../components/Editsection';
 import Edittext from '../components/Edittext';
 import Editinput from '../components/Editinput';
+import { Link } from 'react-router-dom';
 
 const Additem = () => {
   return (
@@ -16,7 +17,9 @@ const Additem = () => {
         center={
           <div className="nav_button">
             <Button text={'자유게시판'} />
-            <Button text={'중고마켓'} type={'nav_activate'} />
+            <Link to="/items">
+              <Button text={'중고마켓'} type={'nav_activate'} />
+            </Link>
           </div>
         }
         rightChild={<img src={Nav_user} />}
