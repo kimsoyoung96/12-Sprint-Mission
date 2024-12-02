@@ -17,21 +17,21 @@ const Editinput = ({ type, info, placeholder }) => {
 
   if (type === 'img') {
     return (
-      <div className="imameSection">
-        <div className="image-upload">
-          <label className="upload_input" for="file-input">
+      <div className="imageSection">
+        <div className="image_upload">
+          <label className="upload_input" for="file_input">
             <img src={img_up} />
             이미지 등록
           </label>
           <input
-            id="file-input"
+            id="file_input"
             className="hidden_input"
             type="file"
             onChange={saveImgFile}
             ref={imgRef}
           />
         </div>
-        <div>
+        <div className="image_preview">
           <img src={imgFile ? imgFile : ''} />
         </div>
       </div>
