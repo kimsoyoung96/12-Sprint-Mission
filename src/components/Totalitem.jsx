@@ -12,7 +12,7 @@ const Totalitem = ({ totalitems }) => {
             <div className="itemPrice">{item.price.toLocaleString()}원</div>
             <div className="itemTotal">
               <img src={favorit_img} />
-              {item.favoritCount}
+              {item.favoriteCount}
             </div>
           </div>
         );
