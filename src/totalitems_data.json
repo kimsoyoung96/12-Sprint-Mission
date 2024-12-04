@@ -1,0 +1,134 @@
+[
+  {
+    "id": 435,
+    "name": "상품 이름",
+    "description": "string",
+    "price": 0,
+    "tags": ["전자제품"],
+    "images": ["https://example.com/..."],
+    "ownerId": 479,
+    "favoriteCount": 0,
+    "createdAt": "2024-11-28T14:39:07.254Z",
+    "updatedAt": "2024-11-28T14:39:07.254Z"
+  },
+  {
+    "id": 434,
+    "name": "맥북맥북",
+    "description": "맥북맥북맥북요",
+    "price": 1230,
+    "tags": ["맥북", "새거"],
+    "images": [
+      "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/447/1731345789710/icons8-nextjs-280.png"
+    ],
+    "ownerId": 466,
+    "favoriteCount": 0,
+    "createdAt": "2024-11-27T02:30:04.590Z",
+    "updatedAt": "2024-11-27T02:30:04.590Z"
+  },
+  {
+    "id": 433,
+    "name": "상품 이름테스트",
+    "description": "string",
+    "price": 0,
+    "tags": ["전자제품"],
+    "images": ["https://example.com/..."],
+    "ownerId": 475,
+    "favoriteCount": 0,
+    "createdAt": "2024-11-26T06:52:13.772Z",
+    "updatedAt": "2024-11-26T06:52:13.772Z"
+  },
+  {
+    "id": 432,
+    "name": "신형 맥북",
+    "description": "테스트",
+    "price": 1200000,
+    "tags": ["맥북", "애플"],
+    "images": [
+      "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/462/1731555173279/Codeit_FE9.png"
+    ],
+    "ownerId": 466,
+    "favoriteCount": 0,
+    "createdAt": "2024-11-26T04:54:19.710Z",
+    "updatedAt": "2024-11-26T04:54:19.710Z"
+  },
+  {
+    "id": 431,
+    "name": "노이미지 상품2",
+    "description": "노이미지 상품2",
+    "price": 1000,
+    "tags": ["코드잇"],
+    "images": [
+      "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/462/1731555173279/Codeit_FE9.png"
+    ],
+    "ownerId": 466,
+    "favoriteCount": 0,
+    "createdAt": "2024-11-26T04:16:05.859Z",
+    "updatedAt": "2024-11-26T04:16:05.859Z"
+  },
+  {
+    "id": 430,
+    "name": "test",
+    "description": "tes",
+    "price": 123,
+    "tags": ["test"],
+    "images": [
+      "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/466/1732583236428/KakaoTalk_Photo_2024-11-26-09-33-58.jpeg"
+    ],
+    "ownerId": 466,
+    "favoriteCount": 0,
+    "createdAt": "2024-11-26T01:07:16.624Z",
+    "updatedAt": "2024-11-26T01:07:16.624Z"
+  },
+  {
+    "id": 428,
+    "name": "jetbrain",
+    "description": "jetbrain mono",
+    "price": 123456,
+    "tags": [],
+    "images": [],
+    "ownerId": 464,
+    "favoriteCount": 0,
+    "createdAt": "2024-11-20T12:47:01.832Z",
+    "updatedAt": "2024-11-20T12:47:01.832Z"
+  },
+  {
+    "id": 427,
+    "name": "상품 이름",
+    "description": "string",
+    "price": 1000,
+    "tags": ["전자제품"],
+    "images": [],
+    "ownerId": 462,
+    "favoriteCount": 0,
+    "createdAt": "2024-11-14T11:09:01.391Z",
+    "updatedAt": "2024-11-14T11:09:01.391Z"
+  },
+  {
+    "id": 423,
+    "name": "노이미지 상품",
+    "description": "노이미지 상품 테스트",
+    "price": 1000,
+    "tags": ["no", "image"],
+    "images": [
+      "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/462/1731555173279/Codeit_FE9.png"
+    ],
+    "ownerId": 462,
+    "favoriteCount": 1,
+    "createdAt": "2024-11-14T03:32:58.831Z",
+    "updatedAt": "2024-11-14T03:33:15.885Z"
+  },
+  {
+    "id": 421,
+    "name": "중고 상품 하나",
+    "description": "중고 상품 하나 입니다.",
+    "price": 1000,
+    "tags": ["중고"],
+    "images": [
+      "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/462/1731488085346/next.jpg"
+    ],
+    "ownerId": 462,
+    "favoriteCount": 1,
+    "createdAt": "2024-11-13T08:55:15.663Z",
+    "updatedAt": "2024-11-14T03:30:09.628Z"
+  }
+]

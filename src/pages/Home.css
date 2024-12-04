@@ -1,0 +1,31 @@
+form {
+  @media (max-width: 1920px) {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  @media (max-width: 1199px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @media (max-width: 767px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.item_title {
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.Home .item {
+  max-width: 1201px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+a:link {
+  text-decoration: none;
+}
