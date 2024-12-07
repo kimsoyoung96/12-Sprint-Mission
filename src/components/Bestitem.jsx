@@ -1,5 +1,5 @@
-import favorit_img from '../assets/heart_favorit.png';
-import './BestItem.css';
+import favorit_img from "../assets/heart_favorit.png";
+import "./BestItem.css";
 
 const Bestitem = ({ items }) => {
   const limiteData = items.slice(0, 4);
