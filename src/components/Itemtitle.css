@@ -4,6 +4,28 @@
   gap: 12px;
   height: 32px;
   white-space: nowrap;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+@media (max-width: 767px) {
+  .search {
+    height: 92px;
+  }
+  .Item_text:nth-child(1) {
+    order: 1;
+  }
+
+  .Item_input:nth-child(2) {
+    order: 3;
+  }
+
+  .Item_button:nth-child(3) {
+    order: 2;
+  }
+  .Item_select:nth-child(4) {
+    order: 4;
+  }
 }
 
 .Itemtitle .Item_text {

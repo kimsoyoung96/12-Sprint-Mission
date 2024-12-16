@@ -1,29 +1,14 @@
 import './Additem.css';
 import Nav from '../components/Nav';
-import Nav_logo from '../assets/nav_panda_logo_img.png';
-import Nav_user from '../assets/nav_user_img.png';
 import Button from '../components/Button';
 import Itemtitle from '../components/Itemtitle';
 import Editsection from '../components/Editsection';
-import Edittext from '../components/Edittext';
 import Editinput from '../components/Editinput';
-import { Link } from 'react-router-dom';
 
 const Additem = () => {
   return (
     <div className="Additem">
-      <Nav
-        leftChild={<img src={Nav_logo} />}
-        center={
-          <div className="nav_button">
-            <Button text={'자유게시판'} />
-            <Link to="/items">
-              <Button text={'중고마켓'} type={'nav_activate'} />
-            </Link>
-          </div>
-        }
-        rightChild={<img src={Nav_user} />}
-      />
+      <Nav />
       {/* 아래는 상품등록 페이지 구현 */}
       <form className="edit">
         <div className="edit_title">
@@ -34,17 +19,17 @@ const Additem = () => {
         </div>
         <div className="edit_info">
           <Editsection
-            topChlid={<Edittext text={'상품 이미지'} />}
+            topChlid={'상품이미지'}
             center={<Editinput type={'img'} />}
           />
           <Editsection
-            topChlid={<Edittext text={'상품명'} />}
+            topChlid={'상품명'}
             center={
               <Editinput info={'name'} placeholder={'상품명을 입력해주세요'} />
             }
           />
           <Editsection
-            topChlid={<Edittext text={'상품 소개'} />}
+            topChlid={'상품 소개'}
             center={
               <Editinput
                 info={'info'}
@@ -53,7 +38,7 @@ const Additem = () => {
             }
           />
           <Editsection
-            topChlid={<Edittext text={'판매가격'} />}
+            topChlid={'판매가격'}
             center={
               <Editinput
                 info={'price'}
@@ -62,7 +47,7 @@ const Additem = () => {
             }
           />
           <Editsection
-            topChlid={<Edittext text={'태그'} />}
+            topChlid={'태그'}
             center={
               <Editinput info={'tag'} placeholder={'태그를 입력해주세요'} />
             }
