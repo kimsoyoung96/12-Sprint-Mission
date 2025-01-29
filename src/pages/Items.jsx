@@ -3,11 +3,11 @@ import { useCallback, useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import arrowLeft from "../assets/arrow_left.svg";
 import arrowRight from "../assets/arrow_right.svg";
-import styles from "./Items.module.css";
 import { ReactComponent as SearchIcon } from "../assets/SearchIcon.svg";
 import favorit_img from "../assets/heart_favorit.png";
 import noImage from "../assets/no-image.png";
 import { getProductData } from "../api/api";
+import styles from "./Items.module.css";
 
 const Home = () => {
   const [data, setData] = useState([]);

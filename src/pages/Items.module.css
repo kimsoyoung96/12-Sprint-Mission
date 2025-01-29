@@ -42,11 +42,16 @@ a:link {
   display: flex;
   align-content: center;
   gap: 12px;
-  /* height: 32px; */
   margin-bottom: 24px;
   white-space: nowrap;
   flex-wrap: wrap;
   align-items: stretch;
+
+  @media (max-width: 767px) {
+    display: grid;
+    grid-template-rows: repeat((2, 1fr));
+    grid-template-columns: 1fr 135px;
+  }
 }
 
 .item:nth-child(1) {
@@ -60,6 +65,7 @@ a:link {
 .item:nth-child(2) {
   @media (max-width: 767px) {
     order: 3;
+    flex: 1;
   }
 }
 
@@ -85,6 +91,9 @@ a:link {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 ::placeholder {
@@ -146,6 +155,10 @@ a:link {
   }
 }
 
+.bestItemsContainer {
+  cursor: pointer;
+}
+
 .totalItemsBox {
   display: grid;
   grid-template-rows: 2fr;
@@ -166,13 +179,13 @@ a:link {
   }
 }
 
+.totalItemsContainer {
+  cursor: pointer;
+}
+
 .totalItemsBox > div {
   display: flex;
   flex-direction: column;
-}
-
-.totalItemsContainer .itemImg {
-  cursor: pointer;
 }
 
 .itemImg img {
@@ -188,7 +201,6 @@ a:link {
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  cursor: pointer;
 }
 
 .itemPrice {
@@ -206,7 +218,7 @@ a:link {
   line-height: 18px;
 }
 
-.totalItemsBox .totalItemsContainer div {
+.totalItemsBox .totalItemsContainer > div {
   margin-bottom: 6px;
 }
 /*  */
