@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import styles from "./Signup.module.css";
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -119,7 +118,7 @@ const Signup = () => {
     setIsPasswordVisible((prevState) => !prevState);
   };
 
-  // 로컬레포지토리에 저장하기
+  // 로컬스토리지에 저장하기
   const localSave = () => {
     localStorage.setItem("email", email);
     localStorage.setItem("nickName", nickName);
@@ -141,7 +140,9 @@ const Signup = () => {
         <div className={styles.formDiv}>
           <label className={styles.formLabel}>이메일</label>
           <input
-            className={styles.formInput}
+            className={`${styles.formInput} ${
+              emailError === null ? "" : styles.errorInput
+            }`}
             name="username"
             type="text"
             value={email}
@@ -151,8 +152,8 @@ const Signup = () => {
             }}
             placeholder="이메일을 입력해주세요"
           />
-          {emailError && <p>{emailError}</p>}
-        </div>{" "}
+          {emailError && <p className={styles.errorMessage}>{emailError}</p>}
+        </div>
         <div className={styles.formDiv}>
           <label className={styles.formLabel}>닉네임</label>
           <input
@@ -160,13 +161,17 @@ const Signup = () => {
               onChangeNickName(e);
               handleInputChange();
             }}
-            className={styles.formInput}
+            className={`${styles.formInput} ${
+              nickNameError === null ? "" : styles.errorInput
+            }`}
             name="nikname"
             type="text"
             value={nickName}
             placeholder="닉네임을 입력해주세요"
           />
-          {nickNameError && <p>{nickNameError}</p>}
+          {nickNameError && (
+            <p className={styles.errorMessage}>{nickNameError}</p>
+          )}
         </div>
         <div className={styles.formDiv}>
           <label className={styles.formLabel}>비밀번호</label>
@@ -175,7 +180,9 @@ const Signup = () => {
               onChangePassword(e);
               handleInputChange();
             }}
-            className={styles.formInput}
+            className={`${styles.formInput} ${
+              passwordError === null ? "" : styles.errorInput
+            }`}
             name="password"
             type={isPasswordVisible ? "text" : "password"}
             value={password}
@@ -190,10 +197,12 @@ const Signup = () => {
                   ? "/image/btn_visibility_on.png"
                   : "/image/btn_visibility_off.png"
               }
-              alt="password-text-off"
+              alt="비밀번호 온오프 토글 이미지"
             />
           </div>
-          {passwordError && <p>{passwordError}</p>}
+          {passwordError && (
+            <p className={styles.errorMessage}>{passwordError}</p>
+          )}
         </div>
         <div className={styles.formDiv}>
           <label className={styles.formLabel}>비밀번호 확인</label>
@@ -202,7 +211,9 @@ const Signup = () => {
               onChangePasswordMatch(e);
               handleInputChange();
             }}
-            className={styles.formInput}
+            className={`${styles.formInput} ${
+              passwordMatchError === null ? "" : styles.errorInput
+            }`}
             name="password-repeat"
             type={isPasswordVisible ? "text" : "password"}
             value={passwordMatch}
@@ -217,10 +228,12 @@ const Signup = () => {
                   ? "/image/btn_visibility_on.png"
                   : "/image/btn_visibility_off.png"
               }
-              alt="password-text-off"
+              alt="비밀번호 온오프 토글 이미지"
             />
           </div>
-          {passwordMatchError && <p>{passwordMatchError}</p>}
+          {passwordMatchError && (
+            <p className={styles.errorMessage}>{passwordMatchError}</p>
+          )}
         </div>
         <Link to={"/items"}>
           <button

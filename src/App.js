@@ -4,6 +4,7 @@ import Home from "./pages/Home.jsx";
 import Additem from "./pages/Additem.jsx";
 import Notfound from "./pages/Notfound.jsx";
 import Items from "./pages/Items.jsx";
+import Signup from "./pages/Signup.jsx";
 import Login from "./pages/Login.jsx";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/items" element={<Items />} />
         <Route path="/additem" element={<Additem />} />
