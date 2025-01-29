@@ -5,7 +5,7 @@ import HomePageSection from "../components/HomePageSection";
 
 const Home = () => {
   return (
-    <div>
+    <div className="homeContainer">
       <nav className="logo">
         <Link to={"/"}>
           <img src="/image/HomePageLogoImg.png" alt="판다마켓홈페이지 로고" />
