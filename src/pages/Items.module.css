@@ -183,6 +183,21 @@ a:link {
 .totalItemsBox .totalItemsContainer > div {
   margin-bottom: 6px;
 }
+
+.totalItemsBox {
+  @media (max-width: 1199px) {
+    .totalItem:nth-child(n + 7) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .totalItem:nth-child(n + 5) {
+      display: none;
+    }
+  }
+}
+
 /*  */
 
 /* .pagenation_box {

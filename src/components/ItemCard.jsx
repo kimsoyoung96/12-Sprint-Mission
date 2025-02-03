@@ -3,11 +3,11 @@ import { ReactComponent as HeartIcon } from "../assets/favorite.svg";
 import noImage from "../assets/no-image.png";
 import styles from "./ItemCard.module.css";
 
-function ItemCard({ item }) {
+function ItemCard({ className, item }) {
   const thumbnailUrl = "https://example.com/...";
 
   return (
-    <div>
+    <div className={className}>
       <img
         src={
           item.images.some((image) => image === thumbnailUrl)

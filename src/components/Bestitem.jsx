@@ -22,15 +22,13 @@ const Bestitem = () => {
 
   return (
     <div className={styles.bestItemsBox}>
-      {itemList
-        ?.map((item) => (
-          <ItemCard
-            className={styles.item}
-            item={item}
-            key={`best-item-${item.id}`}
-          />
-        ))
-        .slice(0, 4)}
+      {itemList?.map((item) => (
+        <ItemCard
+          className={styles.item}
+          item={item}
+          key={`best-item-${item.id}`}
+        />
+      ))}
     </div>
   );
 };

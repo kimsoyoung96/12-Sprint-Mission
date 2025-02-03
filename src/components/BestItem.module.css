@@ -1,31 +1,43 @@
 .bestItemsBox {
   display: grid;
-  grid-template-rows: 1fr;
+  /* grid-template-rows: 1fr; */
   grid-template-columns: repeat(4, 1fr);
 
   gap: 24px;
   margin-top: 16px;
+
+  @media (max-width: 1920px) {
+    .item:nth-child(n + 5) {
+      display: none;
+    }
+  }
+  @media (max-width: 1199px) {
+    grid-template-columns: repeat(2, 1fr);
+    .item:nth-child(n + 3) {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+    .item:nth-child(n + 2) {
+      display: none;
+    }
+  }
 }
 
-@media (max-width: 1199px) {
-  .bestItemsBox {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* 화면이 1199px 이하일 때, 3번째 이후 항목 숨기기 */
 
+/* @media (max-width: 1920px) {
   .bestItemsBox .item:nth-child(n + 3) {
     display: none;
   }
 }
 
 @media (max-width: 767px) {
-  .bestItemsBox {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
   .bestItemsBox .item:nth-child(n + 2) {
     display: none;
   }
-}
+} */
 
 .bestItemsBox > img {
   width: 100%;

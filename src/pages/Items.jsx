@@ -59,7 +59,11 @@ const Items = () => {
           </div>
           <div className={styles.totalItemsBox}>
             {itemList?.map((item) => (
-              <ItemCard item={item} key={`all-item-${item.id}`} />
+              <ItemCard
+                className={styles.totalItem}
+                item={item}
+                key={`all-item-${item.id}`}
+              />
             ))}
           </div>
         </section>
