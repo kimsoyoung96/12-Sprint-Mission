@@ -2,9 +2,15 @@ import styles from "./Editinput.module.css";
 import { useRef, useState } from "react";
 import Image from "next/image";
 
-const Editinput = ({ type, info, placeholder }) => {
-  const [imgFile, setImgFile] = useState("");
-  const imgRef = useRef();
+interface Props {
+  type: "img" | "text";
+  info?: string;
+  placeholder?: string;
+}
+
+const Editinput = ({ type, info, placeholder }: Props) => {
+  const [imgFile, setImgFile] = useState<string>("");
+  const imgRef = useRef<HTMLInputElement | null>(null);
 
   const saveImgFile = () => {
     if (!imgRef.current || !imgRef.current.files[0]) {
@@ -18,7 +24,7 @@ const Editinput = ({ type, info, placeholder }) => {
     reader.readAsDataURL(file);
 
     reader.onloadend = () => {
-      if (reader.result) {
+      if (reader.result === "string") {
         setImgFile(reader.result); // reader.result는 base64 데이터 URL
       }
     };
@@ -32,11 +38,11 @@ const Editinput = ({ type, info, placeholder }) => {
     return (
       <div className={styles.imageSection}>
         <div className={styles.image_upload}>
-          <label className={styles.upload_input} for="file_input">
+          <label className={styles.upload_input} htmlFor="file_input">
             <Image
               src="/image/img_upload.png"
-              width={200}
-              height={200}
+              width={48}
+              height={48}
               alt="이미지를 등록하세요"
             />
             이미지 등록
@@ -62,7 +68,7 @@ const Editinput = ({ type, info, placeholder }) => {
   } else {
     return (
       <textarea
-        className={`${styles.Editinput} ${styles[`Editinput_${info}`]}`}
+        className={`${styles.editinput} ${styles[`editinput_${info}`]}`}
         placeholder={placeholder}
       ></textarea>
     );

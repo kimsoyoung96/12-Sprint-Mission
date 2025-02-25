@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Nav() {
   return (
-    <div className={styles.Nav}>
+    <div className={styles.nav}>
       <Link className={styles.logo} href="/">
         <Image
           className={styles.logoImage}

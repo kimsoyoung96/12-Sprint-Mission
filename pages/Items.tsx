@@ -7,13 +7,27 @@ import styles from "./Items.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
+interface Item {
+  id: number;
+  name: string;
+  price: number;
+  images: string[];
+  favoriteCount?: number;
+}
+
+interface ProductResponse {
+  list: Item[];
+}
+
 export default function Items() {
-  const [itemList, setItemList] = useState([]);
+  const [itemList, setItemList] = useState<Item[]>([]);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const products = await getProductData({ orderBy: "recent" });
+        const products: ProductResponse = await getProductData({
+          orderBy: "recent",
+        });
         setItemList(products.list);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -26,7 +40,7 @@ export default function Items() {
   return (
     <div>
       <Nav />
-      <div className={styles.Container}>
+      <div className={styles.container}>
         <section className={styles.bestItems}>
           <div className={styles.items_title}>베스트 상품</div>
           <div className={styles.bestItemsBox}>

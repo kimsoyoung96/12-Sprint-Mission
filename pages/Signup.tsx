@@ -1,98 +1,84 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import styles from "./Signup.module.css";
 import Link from "next/link";
 import { postUserData } from "../src/api/api";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const PASSWORD_MIN_LEN = 8;
 
 export default function Signup() {
-  const [email, setEmail] = useState("");
-  const [nickName, setNickName] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordMatch, setPasswordMatch] = useState("");
-  const [emailError, setEmailError] = useState(null);
-  const [nickNameError, setNickNameError] = useState(null);
-  const [passwordError, setPasswordError] = useState(null);
-  const [passwordMatchError, setPasswordMatchError] = useState(null);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [email, setEmail] = useState<string>("");
+  const [nickName, setNickName] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [passwordMatch, setPasswordMatch] = useState<string>("");
+  const [emailError, setEmailError] = useState<string | null>(null);
+  const [nickNameError, setNickNameError] = useState<string | null>(null);
+  const [passwordError, setPasswordError] = useState<string | null>(null);
+  const [passwordMatchError, setPasswordMatchError] = useState<string | null>(
+    null
+  );
+  const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(true);
+  const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
   const router = useRouter();
 
   // 이메일 값 체크
-  const emailCheck = (email) => {
-    if (!email.trim()) {
-      return "이메일을 입력해주세요";
-    }
-
-    if (!emailRegex.test(email)) {
-      return "잘못된 이메일 형식입니다";
-    }
+  const emailCheck = (email: string): string | null => {
+    if (!email.trim()) return "이메일을 입력해주세요";
+    if (!emailRegex.test(email)) return "잘못된 이메일 형식입니다";
 
     return null;
   };
 
-  const onChangeEmail = (e) => {
+  const onChangeEmail = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setEmail(value);
-
-    const errorMessage = emailCheck(value);
-    setEmailError(errorMessage);
+    setEmailError(emailCheck(value));
   };
 
   // 닉네임 값 체크
-  const nickNameCheck = (nickName) => {
-    if (!nickName.trim()) {
-      return "닉네임을 입력해주세요";
-    }
+  const nickNameCheck = (nickName: string): string | null => {
+    if (!nickName.trim()) return "닉네임을 입력해주세요";
 
     return null;
   };
 
-  const onChangeNickName = (e) => {
+  const onChangeNickName = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setNickName(value);
-
-    const errorMessage = nickNameCheck(value);
-    setNickNameError(errorMessage);
+    setNickNameError(nickNameCheck(value));
   };
 
   // 비밀번호 값 체크
-  const passwordCheck = (password) => {
-    if (!password.trim()) {
-      return `패스워드를 입력해주세요`;
-    }
-
-    if (password.length < PASSWORD_MIN_LEN) {
+  const passwordCheck = (password: string): string | null => {
+    if (!password.trim()) return `패스워드를 입력해주세요`;
+    if (password.length < PASSWORD_MIN_LEN)
       return `패스워드를 ${PASSWORD_MIN_LEN}자 이상입력해주세요`;
-    }
 
     return null;
   };
 
-  const onChangePassword = (e) => {
+  const onChangePassword = (e: ChangeEvent<HTMLInputElement>) => {
     const nextPassword = e.target.value;
     setPassword(nextPassword);
-
-    const errorMessage = passwordCheck(nextPassword);
-    setPasswordError(errorMessage);
+    setPasswordError(passwordCheck(nextPassword));
   };
 
   // 비밀번호 확인 값 체크
-  const PasswordMatch = (password, passwordMatch) => {
-    if (password !== passwordMatch) {
-      return "비밀번호가 일치하지 않습니다.";
-    }
+  const PasswordMatch = (
+    password: string,
+    passwordMatch: string
+  ): string | null => {
+    if (password !== passwordMatch) return "비밀번호가 일치하지 않습니다.";
+
     return null;
   };
 
-  const onChangePasswordMatch = (e) => {
+  const onChangePasswordMatch = (e: ChangeEvent<HTMLInputElement>) => {
     const nextPasswordMatch = e.target.value;
     setPasswordMatch(nextPasswordMatch);
-
-    const errorMessage = PasswordMatch(password, nextPasswordMatch);
-    setPasswordMatchError(errorMessage);
+    setPasswordMatchError(PasswordMatch(password, nextPasswordMatch));
   };
 
   // 회원가입 버튼 활성화 여부 판단
@@ -120,7 +106,7 @@ export default function Signup() {
     setIsPasswordVisible((prevState) => !prevState);
   };
 
-  const handleSignUp = async (e) => {
+  const handleSignUp = async (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
     const userData = {
@@ -149,9 +135,11 @@ export default function Signup() {
     <div className={styles.container}>
       <header className={styles.header}>
         <Link href="/">
-          <img
+          <Image
             className={styles.logo}
             src="/image/loginLogo.png"
+            width={396}
+            height={132}
             alt="로그인 페이지 판다마켓 로고"
           />
         </Link>
@@ -206,14 +194,16 @@ export default function Signup() {
             placeholder="비밀번호를 입력해주세요"
           />
           <div className={styles.toggleTag}>
-            <img
+            <Image
               className={styles.toggleImg}
               onClick={togglePasswordVisibility}
               src={
                 isPasswordVisible
-                  ? "/image/btn_visibility_on.png"
-                  : "/image/btn_visibility_off.png"
+                  ? "/image/btn_visibility_on.svg"
+                  : "/image/btn_visibility_off.svg"
               }
+              width={24}
+              height={24}
               alt="비밀번호 온오프 토글 이미지"
             />
           </div>
@@ -236,14 +226,16 @@ export default function Signup() {
             placeholder="비밀번호를 다시 입력해주세요"
           />
           <div className={styles.toggleTag}>
-            <img
+            <Image
               className={styles.toggleImg}
               onClick={togglePasswordVisibility}
               src={
                 isPasswordVisible
-                  ? "/image/btn_visibility_on.png"
-                  : "/image/btn_visibility_off.png"
+                  ? "/image/btn_visibility_on.svg"
+                  : "/image/btn_visibility_off.svg"
               }
+              width={24}
+              height={24}
               alt="비밀번호 온오프 토글 이미지"
             />
           </div>
@@ -270,8 +262,10 @@ export default function Signup() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            <Image
               src="/image/googleLogin.png"
+              width={42}
+              height={42}
               alt="구글 계정으로 로그인하는 버튼"
             />
           </a>
@@ -280,8 +274,10 @@ export default function Signup() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            <Image
               src="/image/kakaoLogin.png"
+              width={42}
+              height={42}
               alt="카카오톡 계정으로 로그인하는 버튼"
             />
           </a>

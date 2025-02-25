@@ -1,4 +1,4 @@
-.Itemtitle {
+.itemtitle {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -12,27 +12,27 @@
   .search {
     height: 92px;
   }
-  .Item_text:nth-child(1) {
+  .item_text:nth-child(1) {
     order: 1;
   }
 
-  .Item_input:nth-child(2) {
+  .item_input:nth-child(2) {
     order: 3;
   }
 
-  .Item_button:nth-child(3) {
+  .item_button:nth-child(3) {
     order: 2;
   }
-  .Item_select:nth-child(4) {
+  .item_select:nth-child(4) {
     order: 4;
   }
 }
 
-.Itemtitle .Item_text {
+.itemtitle .item_text {
   flex: 1;
 }
 
-.Itemtitle .Item_input input {
+.itemtitle .item_input input {
   width: 325px;
   height: 42px;
   padding: 9px 20px;
@@ -45,7 +45,7 @@
   line-height: 26px;
 }
 
-.Itemtitle .Item_select select {
+.itemtitle .item_select select {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   width: 130px;

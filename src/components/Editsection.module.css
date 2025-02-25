@@ -1,10 +1,10 @@
-.Editsection {
+.editsection {
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
 }
 
-.Editsection .edit_text {
+.editsection .edit_text {
   margin-bottom: 16px;
   font-size: 18px;
   font-weight: 700;

@@ -25,20 +25,6 @@
   }
 }
 
-/* 화면이 1199px 이하일 때, 3번째 이후 항목 숨기기 */
-
-/* @media (max-width: 1920px) {
-  .bestItemsBox .item:nth-child(n + 3) {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .bestItemsBox .item:nth-child(n + 2) {
-    display: none;
-  }
-} */
-
 .bestItemsBox > img {
   width: 100%;
 }

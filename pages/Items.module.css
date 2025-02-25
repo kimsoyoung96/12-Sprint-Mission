@@ -4,7 +4,7 @@
   line-height: 32px;
 }
 
-.Container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
 
@@ -132,8 +132,6 @@
   padding: 12px 20px;
 }
 
-/*  */
-
 .totalItemsBox {
   display: grid;
   grid-template-rows: 2fr;
@@ -189,8 +187,6 @@
     }
   }
 }
-
-/*  */
 
 /* .pagenation_box {
   display: flex;

@@ -1,4 +1,4 @@
-.Button {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
 }
 
 /* 홈페이지 로그인에 사용할 버튼 */
-.Button_Home {
+.button_Home {
   width: 128px;
   height: 48px;
   background-color: #3692ff;
@@ -23,7 +23,7 @@
 }
 
 /* 홈페이지 구경하러가기에 사용할 버튼 */
-.Button_itemsMove {
+.button_itemsMove {
   width: 357px;
   height: 56px;
   background-color: #3692ff;
@@ -41,12 +41,12 @@
 }
 
 /* Nav 컴포넌트에서 사용할 버튼 */
-.Button_nav_activate {
+.button_nav_activate {
   color: #3692ff;
 }
 
 /* Additem페이지에서 사용할 등록 버튼 */
-.Button_register {
+.button_register {
   background-color: #9ca3af;
   color: #f3f4f6;
   height: 42px;

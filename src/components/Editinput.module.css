@@ -1,4 +1,4 @@
-.Editinput {
+.editinput {
   max-width: 1200px;
   width: 100%;
   background-color: #f3f4f6;
@@ -8,13 +8,13 @@
   resize: none;
 }
 
-.Editinput_name,
-.Editinput_price,
-.Editinput_tag {
+.editinput_name,
+.editinput_price,
+.editinput_tag {
   height: 56px;
 }
 
-.Editinput_info {
+.editinput_info {
   height: 282px;
 }
 
@@ -27,6 +27,11 @@
   position: relative;
   width: 282px;
   height: 282px;
+
+  @media (max-width: 767px) {
+    width: 168px;
+    height: 168px;
+  }
 }
 
 .image_preview img {
@@ -48,6 +53,11 @@
   height: 282px;
   cursor: pointer;
   border-radius: 12px;
+
+  @media (max-width: 767px) {
+    width: 168px;
+    height: 168px;
+  }
 }
 
 .upload_input {

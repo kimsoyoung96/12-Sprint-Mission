@@ -2,14 +2,26 @@ import React, { useMemo } from "react";
 import styles from "./ItemCard.module.css";
 import Image from "next/image";
 
-const thumbnailUrl = "https://example.com/...";
+const thumbnailUrl = "https://example.com/..." as const;
 
-export default function ItemCard({ className, item }) {
+interface Item {
+  name: string;
+  price: number;
+  images: string[];
+  favoriteCount?: number;
+}
+
+interface Props {
+  className: string;
+  item: Item;
+}
+
+export default function ItemCard({ className, item }: Props) {
   const imageSource = useMemo(
     () =>
       item.images.some((image) => image === thumbnailUrl)
         ? "/image/no-image.png"
-        : item.images[0],
+        : item.images[0] || "/image/no-image.png",
     [item.images]
   );
 
