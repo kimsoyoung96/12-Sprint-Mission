@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { getProductData } from "../api/api";
 import styles from "./BestItem.module.css";
 
-const Bestitem = () => {
+export default function Bestitem() {
   const [itemList, setItemList] = useState([]);
 
   useEffect(() => {
@@ -17,8 +17,7 @@ const Bestitem = () => {
     };
 
     fetchProduct();
-    console.log(itemList);
-  }, []); // 빈 배열 → 컴포넌트가 처음 마운트될 때만 실행됨
+  }, []);
 
   return (
     <div className={styles.bestItemsBox}>
@@ -31,6 +30,4 @@ const Bestitem = () => {
       ))}
     </div>
   );
-};
-
-export default Bestitem;
+}

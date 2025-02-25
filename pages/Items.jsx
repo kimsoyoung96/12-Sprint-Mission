@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getProductData } from "../api/api";
-import Nav from "../components/Nav";
-import ItemCard from "../components/ItemCard";
-import { ReactComponent as SearchIcon } from "../assets/SearchIcon.svg";
-import Bestitem from "../components/Bestitem";
+import { getProductData } from "../src/api/api";
+import Nav from "../src/components/Nav";
+import ItemCard from "../src/components/ItemCard";
+import Bestitem from "../src/components/Bestitem";
 import styles from "./Items.module.css";
+import Link from "next/link";
+import Image from "next/image";
 
-const Items = () => {
+export default function Items() {
   const [itemList, setItemList] = useState([]);
 
   useEffect(() => {
@@ -21,8 +21,7 @@ const Items = () => {
     };
 
     fetchProduct();
-    console.log(itemList);
-  }, []); // 빈 배열 → 컴포넌트가 처음 마운트될 때만 실행됨
+  }, []);
 
   return (
     <div>
@@ -44,9 +43,15 @@ const Items = () => {
                 className={styles.item_input}
                 placeholder="검색할 상품을 입력해주세요"
               />
-              <SearchIcon className={styles.search_icon} />
+              <Image
+                src="/image/SearchIcon.svg"
+                className={styles.search_icon}
+                width={20}
+                height={20}
+                alt="검색"
+              />
             </div>
-            <Link to={"/additem"} className={styles.item}>
+            <Link href="/Additem" className={styles.item}>
               <button className={styles.itemAdd_button}>상품 등록하기</button>
             </Link>
 
@@ -80,6 +85,4 @@ const Items = () => {
       </section> */}
     </div>
   );
-};
-
-export default Items;
+}

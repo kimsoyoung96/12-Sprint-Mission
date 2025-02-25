@@ -34,10 +34,6 @@
   margin-top: 40px;
 }
 
-a:link {
-  text-decoration: none;
-}
-
 .item_bar {
   display: flex;
   align-content: center;
@@ -94,10 +90,6 @@ a:link {
   @media (max-width: 767px) {
     width: 100%;
   }
-}
-
-::placeholder {
-  color: #9ca3af;
 }
 
 .searchBox {

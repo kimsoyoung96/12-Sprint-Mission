@@ -1,29 +1,27 @@
-import { Link } from "react-router-dom";
-import Button from "../components/Button";
-import "./Home.css";
-import HomePageSection from "../components/HomePageSection";
+import Button from "../src/components/Button";
+import styles from "./Home.module.css";
+import HomePageSection from "../src/components/HomePageSection";
+import Link from "next/link";
 
-const Home = () => {
+export default function Home() {
   return (
-    <div className="homeContainer">
-      <nav className="logo">
-        <Link to={"/"}>
+    <div className={styles.homeContainer}>
+      <nav className={styles.logo}>
+        <Link href="/">
           <img src="/image/HomePageLogoImg.png" alt="판다마켓홈페이지 로고" />
         </Link>
-        <Link to={"/login"}>
-          <Button
-            className="homepage-logo-right"
-            text={"로그인"}
-            type={"Home"}
-          />
+        <Link href="/Login">
+          <Button className={styles.homepage} text={"로그인"} type={"Home"} />
         </Link>
       </nav>
       <hero>
-        <div className="hero_backgroundcolor">
-          <div className="hero_container">
-            <div className="hero_info">
-              <h1>일상의 모든 물건을 거래해 보세요</h1>
-              <Link to={"/items"}>
+        <div className={styles.hero_backgroundcolor}>
+          <div className={styles.hero_container}>
+            <div className={styles.hero_info}>
+              <h1 className={styles.hero_info_title}>
+                일상의 모든 물건을 거래해 보세요
+              </h1>
+              <Link href="/Items">
                 <Button text={"구경하러 가기"} type={"itemsMove"} />
               </Link>
             </div>
@@ -31,7 +29,7 @@ const Home = () => {
           </div>
         </div>
       </hero>
-      <main className="display">
+      <main className={styles.display}>
         <HomePageSection
           image={"/image/Img_home_01.png"}
           alt={"인기상품 확인 코너"}
@@ -58,20 +56,22 @@ const Home = () => {
         />
       </main>
       <section>
-        <div className="hero_backgroundcolor">
-          <div className="hero_container">
-            <div className="hero_info">
-              <h1>믿을 수 있는 판다마켓 중고 거래</h1>
+        <div className={styles.hero_backgroundcolor}>
+          <div className={styles.hero_container}>
+            <div className={styles.hero_info}>
+              <h1 className={styles.hero_info_title}>
+                믿을 수 있는 판다마켓 중고 거래
+              </h1>
             </div>
             <img src="/image/bottomImg.png" alt="판다가 거래하는 사진" />
           </div>
         </div>
       </section>
       <footer>
-        <div className="footerContainer">
-          <div className="footerBox">
-            <span className="codeit">ⓒcodeit-2024</span>
-            <div className="sitelink">
+        <div className={styles.footerContainer}>
+          <div className={styles.footerBox}>
+            <span className={styles.codeit}>ⓒcodeit-2024</span>
+            <div className={styles.sitelink}>
               <a href="/privacy" target="_blank" rel="noopener noreferrer">
                 Privacy Policy
               </a>
@@ -79,7 +79,7 @@ const Home = () => {
                 FAQ
               </a>
             </div>
-            <div className="sns_link">
+            <div className={styles.sns_link}>
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
@@ -114,6 +114,4 @@ const Home = () => {
       </footer>
     </div>
   );
-};
-
-export default Home;
+}

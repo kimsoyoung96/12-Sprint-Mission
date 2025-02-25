@@ -1,11 +1,4 @@
-* {
-  font-family: Pretendard, sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-}
-
-h1,
-h2 {
+.hero_info_title {
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
@@ -101,12 +94,6 @@ h2 {
   }
 }
 
-a:link {
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .display {
   padding: 24px;
   width: 100%;
@@ -147,6 +134,6 @@ a:link {
 .sns_link {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 12px;
 }

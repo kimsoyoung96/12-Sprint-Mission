@@ -1,8 +1,11 @@
-import './Button.css';
+import styles from "./Button.module.css";
 
 const Button = ({ text, type }) => {
   return (
-    <button type={type} className={`Button Button_${type}`}>
+    <button
+      type={type}
+      className={`${styles.Button} ${styles[`Button_${type}`]}`}
+    >
       {text}
     </button>
   );
